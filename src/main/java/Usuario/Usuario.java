@@ -4,8 +4,8 @@ public abstract class Usuario {
 
     private String email;
     private String senha;
-    private int numDispositivos;
-    private float valor;
+    private int numDispositivos = 1;
+    protected float valor;
 
     public String getEmail() {
         return email;

@@ -9,7 +9,7 @@ class PremiumIndividualTest {
     @Test
     void indentificarPessoa() {
         PremiumIndividual premiumIndividual = new PremiumIndividual();
-        premiumIndividual.setEmail("abc@email.com");
+        premiumIndividual.setEmail("abc@gmail.com");
         premiumIndividual.setSenha("123");
         assertEquals("abc@gmail.com", premiumIndividual.indentificarPessoa());
     }

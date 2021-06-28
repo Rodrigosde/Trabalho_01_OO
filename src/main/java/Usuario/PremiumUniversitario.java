@@ -7,6 +7,6 @@ public class PremiumUniversitario extends Usuario{
     }
 
     public float calculaValorPacote(){
-        return this.getValor();
+        return this.valor;
     }
 }
