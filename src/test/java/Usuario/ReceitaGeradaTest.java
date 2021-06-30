@@ -10,27 +10,23 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class ReceitaGeradaTest {
 
+    Usuario premiumduo = new PremiumDuo();
+    Usuario premiumindividual = new PremiumIndividual();
+    Usuario premiumuniversitario = new PremiumUniversitario();
+    List<Usuario> lista = new ArrayList<Usuario>();
+    ReceitaGerada receitaGerada = new ReceitaGerada();
+
     @Test
     void calcularReceitaGeral() {
-        Usuario premiumduo = new PremiumDuo();
-        Usuario premiumindividual = new PremiumIndividual();
-        Usuario premiumuniversitario = new PremiumUniversitario();
-
         premiumduo.setValor(34);
         premiumduo.setNumDispositivos(2);
         premiumindividual.setValor(36);
         premiumuniversitario.setValor(22);
 
-
-        List<Usuario> lista = new ArrayList<Usuario>();
         lista.add(premiumduo);
         lista.add(premiumindividual);
         lista.add(premiumuniversitario);
 
-
-        ReceitaGerada receitaGerada = new ReceitaGerada();
-
         assertEquals(112.0f,receitaGerada.calcularReceitaGeral(lista));
-
     }
 }

@@ -45,6 +45,6 @@ public abstract class Usuario {
 
     public abstract float calculaValorPacote();
 
-    public abstract String indentificarPessoa();
+    public abstract String identificarPessoa();
 
 }

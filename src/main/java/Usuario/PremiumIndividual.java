@@ -2,7 +2,7 @@ package Usuario;
 
 public class PremiumIndividual extends Usuario{
 
-    public String indentificarPessoa() {
+    public String identificarPessoa() {
         return getEmail();
     }
 

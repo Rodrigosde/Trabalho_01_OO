@@ -6,18 +6,25 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class PremiumUniversitarioTest {
 
+    Usuario premiumUniversitario = new PremiumUniversitario();
+
     @Test
-    void indentificarPessoa() {
-        Usuario premiumUniversitario = new PremiumUniversitario();
+    void identificarPessoa() {
         premiumUniversitario.setEmail("abc@gmail.com");
         premiumUniversitario.setSenha("123");
-        assertEquals("abc@gmail.com", premiumUniversitario.indentificarPessoa());
+        assertEquals("abc@gmail.com", premiumUniversitario.identificarPessoa());
     }
 
     @Test
     void calculaValorPacote() {
-        Usuario premiumUniversitario = new PremiumUniversitario();
         premiumUniversitario.setValor(19.0f);
         assertEquals(19.0f, premiumUniversitario.calculaValorPacote());
+    }
+
+    @Test
+    void deveRetornarValorDoPacoteDosetValor(){
+        premiumUniversitario.setValor(19.0f);
+        premiumUniversitario.setNumDispositivos(3);
+        assertEquals(19.0, premiumUniversitario.calculaValorPacote());
     }
 }
